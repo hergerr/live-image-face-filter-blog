@@ -1,12 +1,9 @@
 import cv2
 import numpy as np 
 
-#path to classifiers
-path = '/Users/mitchellkrieger/opt/anaconda3/envs/learn-env/share/opencv4/haarcascades/'
-
 #get image classifiers
-face_cascade = cv2.CascadeClassifier(path +'haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier(path +'haarcascade_eye.xml')
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
 
 #read image
 img = cv2.imread('people.jpg')
